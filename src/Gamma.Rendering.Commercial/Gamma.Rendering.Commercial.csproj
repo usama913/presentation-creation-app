@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gamma.Core\Gamma.Core.csproj" />
+  </ItemGroup>
+
+  <!--
+    Intentionally no Aspose.Slides / Syncfusion.Presentation PackageReference
+    here yet — those are commercial packages that require a paid license.
+    When you're ready to switch a provider on:
+
+      1. Buy/obtain the license and NuGet package, e.g.:
+           dotnet add package Aspose.Slides.NET
+         or
+           dotnet add package Syncfusion.Presentation.Net.Core
+      2. Fill in the corresponding stub class below (AsposePresentationRenderer,
+         SyncfusionPresentationRenderer, AsposePdfRenderer, SyncfusionPdfRenderer).
+      3. Flip Rendering:DefaultProvider in appsettings.json to "Aspose" or
+         "Syncfusion" (or pass ?renderer=Aspose per request — see
+         Gamma.Api's PresentationsController).
+
+    No other project needs to change: Gamma.Api and Gamma.Ai only ever see
+    the IPresentationRenderer / IPdfRenderer interfaces from Gamma.Core.
+  -->
+
+</Project>

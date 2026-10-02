@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gamma.Core\Gamma.Core.csproj" />
+    <ProjectReference Include="..\Gamma.Ai\Gamma.Ai.csproj" />
+    <ProjectReference Include="..\Gamma.Rendering.OpenSource\Gamma.Rendering.OpenSource.csproj" />
+    <ProjectReference Include="..\Gamma.Rendering.Commercial\Gamma.Rendering.Commercial.csproj" />
+  </ItemGroup>
+
+  <!--
+    No Microsoft.AspNetCore.OpenApi / Swashbuckle package reference here on
+    purpose, so the whole solution restores and builds with zero NuGet
+    access (see README "Building without network access"). Once you have
+    network access, add either one back for interactive API docs:
+
+      dotnet add package Microsoft.AspNetCore.OpenApi
+      # then in Program.cs: builder.Services.AddOpenApi(); ... app.MapOpenApi();
+
+    or Swashbuckle.AspNetCore for classic Swagger UI.
+  -->
+
+</Project>

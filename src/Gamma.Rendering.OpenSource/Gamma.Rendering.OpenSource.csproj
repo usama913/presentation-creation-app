@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Zero third-party NuGet packages by design: the .pptx writer builds
+      the OOXML package by hand with System.IO.Compression + System.Xml,
+      and the PDF writer emits the PDF byte format directly. Both are part
+      of the .NET runtime/shared framework, so this project restores and
+      builds with no network access at all. This is the "OpenSource"
+      RendererProvider — free forever, no license, no external dependency.
+    -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gamma.Core\Gamma.Core.csproj" />
+  </ItemGroup>
+
+</Project>

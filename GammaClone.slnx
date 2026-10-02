@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Gamma.Ai/Gamma.Ai.csproj" />
+    <Project Path="src/Gamma.Api/Gamma.Api.csproj" />
+    <Project Path="src/Gamma.Core/Gamma.Core.csproj" />
+    <Project Path="src/Gamma.Rendering.Commercial/Gamma.Rendering.Commercial.csproj" />
+    <Project Path="src/Gamma.Rendering.OpenSource/Gamma.Rendering.OpenSource.csproj" />
+    <Project Path="src/Gamma.Samples/Gamma.Samples.csproj" />
+  </Folder>
+</Solution>
